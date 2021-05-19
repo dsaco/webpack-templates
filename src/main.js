@@ -1,8 +1,7 @@
-import { delay } from '@/utils';
+import Vue from 'vue';
 
-const sayHello = async (msg) => {
-    await delay(2000);
-    console.log(msg);
-};
+import App from '@/components/app.vue';
 
-sayHello('hello');
+new Vue({
+	render: (h) => h(App),
+}).$mount('#root');
