@@ -1,8 +1,11 @@
-import { delay } from '@/utils';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const sayHello = async (msg) => {
-    await delay(2000);
-    console.log(msg);
-};
+import App from '@/components/App.jsx';
 
-sayHello('hello');
+ReactDOM.render(
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>,
+	document.querySelector('#root')
+);
